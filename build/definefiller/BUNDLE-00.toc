@@ -1,0 +1,3 @@
+([('definefiller',
+   '/Users/mcatoglu/vsCode_projects/defineReplacer/dist/definefiller',
+   'EXECUTABLE')],)
