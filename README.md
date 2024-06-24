@@ -60,7 +60,7 @@ Not: Çıktı dosyasının başına 'afill_' ibaresi eklenecektir.
 ## Yazar
 
 - **Mert Can Catoglu**
-- E-posta: mertcan.catoglu@tr.bosch.com
+- E-posta: mcatoglu@outlook.com
 
 ## Lisans
 
