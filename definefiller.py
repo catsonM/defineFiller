@@ -11,9 +11,12 @@ def complete_modules_fds(df):
     return df
 
 def complete_define_values(df):
-    acp_columns = df.iloc[3, 3:].dropna().reset_index(drop=True)
+    """Fill missing define values using the column marked as the default ACP."""
+    # Do not drop NaNs so that column indices remain aligned with the original DataFrame
+    acp_columns = df.iloc[3, 3:]
     if 'ACP29036' in acp_columns.values:
-        default_acp_index = acp_columns[acp_columns == 'ACP29036'].index[0] + 3
+        # acp_columns retains the original column indexes, so we can use them directly
+        default_acp_index = acp_columns[acp_columns == 'ACP29036'].index[0]
         default_values = df.iloc[6:, default_acp_index]
         # Fill missing define values
         for col in range(3, df.shape[1]):
